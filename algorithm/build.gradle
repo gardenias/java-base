@@ -1,0 +1,7 @@
+jar {
+    baseName = "algorithm"
+    version = "1.0.201503201854"
+}
+
+dependencies {
+}

@@ -1,3 +1,5 @@
 rootProject.name = 'java-libs'
 
 include 'baidu-api'
+
+include 'algorithm'
