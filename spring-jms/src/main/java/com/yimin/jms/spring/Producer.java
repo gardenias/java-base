@@ -8,7 +8,7 @@ public class Producer {
     private static final String BROKER_URL = "tcp://123.56.95.92:61616";
 
     private static final Boolean NON_TRANSACTED = false;
-    private static final int NUM_MESSAGES_TO_SEND = 50;
+    private static final int NUM_MESSAGES_TO_SEND = 1000;
     private static final long DELAY = 2;
 
     public static void main(String[] args) {

@@ -99,17 +99,21 @@ public class MyConnectionFactoryConfig {
     static List<String> all = new LinkedList<>();
     static List<String> containerSuccess = new ArrayList<>(100);
     static List<String> containerFailure = new ArrayList<>(100);
+    int allCount, successCount, failureCount;
 
     private void doSomethingWithMessageContent(String text) {
-        all.add(text);
+//        all.add(text);
+        allCount++;
         long mills = System.currentTimeMillis();
         if ((mills % 5) > 3) {
 //            System.out.println("FAILURE process message: " + text);
-            doStat(containerFailure, text);
+//            doStat(containerFailure, text);
+            failureCount++;
             throw new RuntimeException(text + ". FAILURE");
         }
 //        System.out.println("SUCCESS process message: " + text);
-        doStat(containerSuccess, text);
+//        doStat(containerSuccess, text);
+        successCount++;
 
     }
 
@@ -131,12 +135,12 @@ public class MyConnectionFactoryConfig {
     public void printStat() {
         System.out.println("");
         System.out.println("=====================================");
-        System.out.println("========= All Container =============");
-        System.out.println(Joiner.on(",\n").join(containerSuccess));
-        System.out.println("======= Success Container ===========");
-        System.out.println(Joiner.on(",\n").join(containerSuccess));
-        System.out.println("======= Failure Container ===========");
-        System.out.println(Joiner.on(",\n").join(containerFailure));
+        System.out.println("========= All Container ===" + allCount + "==========");
+//        System.out.println(Joiner.on(",\n").join(containerSuccess));
+        System.out.println("======= Success Container =" + successCount + "==========");
+//        System.out.println(Joiner.on(",\n").join(containerSuccess));
+        System.out.println("======= Failure Container =" + failureCount + "==========");
+//        System.out.println(Joiner.on(",\n").join(containerFailure));
         System.out.println("=====================================");
     }
 }
