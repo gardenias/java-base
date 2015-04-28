@@ -3,13 +3,17 @@ task wrapper(type: Wrapper) {
     distributionUrl = 'http://services.gradle.org/distributions/gradle-2.1-bin.zip'
 }
 
+List logDependencies = ['org.slf4j:slf4j-api:1.7.5', 'ch.qos.logback:logback-access:1.0.13', 'ch.qos.logback:logback-classic:1.0.13', 'ch.qos.logback:logback-core:1.0.13']
+List testDependencies = ['junit:junit:4.11']
+
 subprojects {
     apply plugin: 'java'
+    apply plugin: 'jacoco'
 
     sourceCompatibility = 1.8
     targetCompatibility = 1.8
     [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
-    version = '1.0.201503081638'
+    version = '1.0'
 
     repositories {
         mavenCentral()
@@ -19,6 +23,28 @@ subprojects {
         compile 'org.projectlombok:lombok:1.16.2'
         compile 'com.google.guava:guava:18.0'
 
-        testCompile group: 'junit', name: 'junit', version: '4.11'
+        compile logDependencies
+        testCompile testDependencies
+    }
+
+    jacoco {
+        toolVersion = "0.7.0.201403182114"
+        reportsDir = file("$buildDir/customJacocoReportDir")
+    }
+
+    jacocoTestReport {
+        reports {
+            xml.enabled false
+            csv.enabled false
+            html.destination "${buildDir}/jacocoHtml"
+        }
+    }
+
+    /*tasks.withType(:compile) {
+        options.encoding = 'UTF-8'
+    }*/
+
+    task listDependencies << {
+        configurations.compile.each { File file -> println file.name }
     }
 }
