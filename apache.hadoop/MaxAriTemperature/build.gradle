@@ -1,3 +1,21 @@
+version = '1.0'
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Max Ari Temperature Job',
+                'Implementation-Version': version,
+                'Main-Class':'com.yimin.apache.hadoop.MaxTemperatureDriver'
+    }
+}
+
+uploadArchives {
+    repositories {
+        flatDir {
+            dirs 'repos'
+        }
+    }
+}
+
 dependencies {
     compile "org.apache.hadoop:hadoop-client:2.7.0"
     compile "org.apache.hadoop:hadoop-hdfs:2.7.0"

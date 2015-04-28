@@ -6,5 +6,4 @@ include 'algorithm'
 
 include 'spring-jms'
 
-include 'apache.hadoop'
-
+include 'apache.hadoop:MaxAriTemperature'
