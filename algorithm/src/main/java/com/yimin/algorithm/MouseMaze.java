@@ -67,14 +67,14 @@ public class MouseMaze {
     }
 
     private boolean visit(int[][] maze, int i, int j) {
-        System.out.printf("maze[%d][%d]=%d\n",i,j,maze[i][j]);
+        System.out.printf("maze[%d][%d]=%d\n", i, j, maze[i][j]);
         if (maze[i][j] == 2) return false;
         if (maze[i][j] == 0) maze[i][j] = 1;
         //开始写代码，递归实现老鼠找迷宫路线的功能
         return ((i == endI && j == endJ))
                 || (i - 1 < 1 ? false : visit(maze, i - 1, j))
                 || i + 1 > 5 ? false : visit(maze, i + 1, j)
-                || (( j + 1 > 5) ? false : visit(maze, i, j + 1))
+                || ((j + 1 > 5) ? false : visit(maze, i, j + 1))
                 || ((j - 1 < 1) ? false : visit(maze, i, j - 1));
     }
 

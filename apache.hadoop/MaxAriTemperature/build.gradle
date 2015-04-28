@@ -4,7 +4,7 @@ jar {
     manifest {
         attributes 'Implementation-Title': 'Max Ari Temperature Job',
                 'Implementation-Version': version,
-                'Main-Class':'com.yimin.apache.hadoop.MaxTemperatureDriver'
+                'Main-Class': 'com.yimin.apache.hadoop.MaxTemperatureDriver'
     }
 }
 

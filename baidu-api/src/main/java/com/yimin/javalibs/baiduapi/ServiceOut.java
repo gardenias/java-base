@@ -7,7 +7,7 @@ import java.io.PrintStream;
  * Created by WuYimin on 2015/3/18.
  */
 public interface ServiceOut {
-    default void print(PrintStream out){
+    default void print(PrintStream out) {
 
     }
 

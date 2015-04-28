@@ -1,6 +1,5 @@
 package com.yimin.jms.spring;
 
-import com.google.common.base.Joiner;
 import org.apache.activemq.ActiveMQConnectionFactory;
 import org.apache.activemq.RedeliveryPolicy;
 import org.springframework.context.annotation.Bean;
@@ -15,7 +14,9 @@ import javax.jms.ConnectionFactory;
 import javax.jms.JMSException;
 import javax.jms.Session;
 import javax.jms.TextMessage;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.concurrent.Executor;
 
 /**

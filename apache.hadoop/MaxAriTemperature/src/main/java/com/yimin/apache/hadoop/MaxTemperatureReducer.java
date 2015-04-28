@@ -21,6 +21,6 @@ public class MaxTemperatureReducer extends Reducer<Text, IntWritable, Text, IntW
                 maxAriTemperature[0] = Math.max(maxAriTemperature[0], ariTemperature.get());
             }
         });
-        context.write(key,new IntWritable(maxAriTemperature[0]));
+        context.write(key, new IntWritable(maxAriTemperature[0]));
     }
 }
