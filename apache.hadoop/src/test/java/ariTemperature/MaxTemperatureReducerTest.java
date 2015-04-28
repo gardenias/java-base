@@ -1,5 +1,6 @@
-package com.yimin.apache.hadoop;
+package ariTemperature;
 
+import com.yimin.apache.hadoop.MaxTemperatureReducer;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mrunit.mapreduce.ReduceDriver;
