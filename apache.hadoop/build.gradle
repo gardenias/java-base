@@ -1,0 +1,15 @@
+dependencies {
+    compile "org.apache.hadoop:hadoop-client:2.7.0"
+    compile "org.apache.hadoop:hadoop-hdfs:2.7.0"
+    compile "org.apache.hadoop:hadoop-mapreduce-client-core:2.7.0"
+    compile "org.apache.hadoop:hadoop-minicluster:2.7.0"
+    compile "org.apache.hadoop:hadoop-annotations:2.7.0"
+    compile "org.apache.hadoop:hadoop-mapreduce-client-common:2.7.0"
+    compile "org.apache.hadoop:hadoop-mapreduce-client-app:2.7.0"
+    compile "org.apache.hadoop:hadoop-common:2.7.0"
+
+    compile "org.mockito:mockito-all:1.10.19"
+    compile group: 'junit', name: 'junit', version: '4.11'
+
+    compile fileTree(dir: 'libs/mrunit-1.1.0', include: '*.jar')
+}

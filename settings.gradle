@@ -5,3 +5,6 @@ include 'baidu-api'
 include 'algorithm'
 
 include 'spring-jms'
+
+include 'apache.hadoop'
+
