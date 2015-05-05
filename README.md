@@ -4,13 +4,13 @@ project language level:8 - Lambdas,type annotations etc.
 
 ###algorithm
 
-ÍøÂçÉÏµÄÒ»Ğ©Ëã·¨ÌâÄ¿
+ç½‘ç»œä¸Šçš„ä¸€äº›ç®—æ³•é¢˜ç›®
 
 ###baidu-api
-- Geoconv:µØÍ¼×ø±ê×ª»»
+- Geoconv:åœ°å›¾åæ ‡è½¬æ¢
 
 ###spring-jms
-- ActiveMQ ¼¯³É
+- ActiveMQ é›†æˆ
 - Session.AUTO_ACKNOWLEDGE,Session.CLIENT_ACKNOWLEDGE
 - ConnectionFactory,CachingConnectionFactory
 - RedeliveryPolicy
