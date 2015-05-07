@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ivy-module version="2.0" xmlns:m="http://ant.apache.org/ivy/maven">
-  <info organisation="java-libs.apache.hadoop" module="MaxAriTemperature" revision="1.0" status="integration" publication="20150428154258">
+  <info organisation="java-libs.apache.hadoop" module="MaxAriTemperature" revision="1.0" status="integration" publication="20150507130700">
     <description/>
   </info>
   <configurations>
     <conf name="archives" visibility="public" description="Configuration for archive artifacts."/>
     <conf name="compile" visibility="private" description="Compile classpath for source set 'main'."/>
     <conf name="default" visibility="public" description="Configuration for default artifacts." extends="runtime"/>
+    <conf name="jacocoAgent" visibility="private" description="The Jacoco agent to use to get coverage data."/>
+    <conf name="jacocoAnt" visibility="private" description="The Jacoco ant tasks to use to get execute Gradle tasks."/>
+    <conf name="pmd" visibility="private" description="The PMD libraries to be used for this project."/>
     <conf name="runtime" visibility="private" description="Runtime classpath for source set 'main'." extends="compile"/>
     <conf name="testCompile" visibility="private" description="Compile classpath for source set 'test'." extends="compile"/>
     <conf name="testRuntime" visibility="private" description="Runtime classpath for source set 'test'." extends="runtime,testCompile"/>
@@ -16,8 +19,11 @@
   </publications>
   <dependencies>
     <dependency org="org.projectlombok" name="lombok" rev="1.16.2" conf="compile-&gt;default"/>
-    <dependency org="com.google.http-client" name="google-http-client" rev="1.19.0" conf="compile-&gt;default"/>
     <dependency org="com.google.guava" name="guava" rev="18.0" conf="compile-&gt;default"/>
+    <dependency org="org.slf4j" name="slf4j-api" rev="1.7.5" conf="compile-&gt;default"/>
+    <dependency org="ch.qos.logback" name="logback-access" rev="1.0.13" conf="compile-&gt;default"/>
+    <dependency org="ch.qos.logback" name="logback-classic" rev="1.0.13" conf="compile-&gt;default"/>
+    <dependency org="ch.qos.logback" name="logback-core" rev="1.0.13" conf="compile-&gt;default"/>
     <dependency org="org.apache.hadoop" name="hadoop-client" rev="2.7.0" conf="compile-&gt;default"/>
     <dependency org="org.apache.hadoop" name="hadoop-hdfs" rev="2.7.0" conf="compile-&gt;default"/>
     <dependency org="org.apache.hadoop" name="hadoop-mapreduce-client-core" rev="2.7.0" conf="compile-&gt;default"/>
@@ -28,5 +34,15 @@
     <dependency org="org.apache.hadoop" name="hadoop-common" rev="2.7.0" conf="compile-&gt;default"/>
     <dependency org="junit" name="junit" rev="4.11" conf="testCompile-&gt;default"/>
     <dependency org="org.mockito" name="mockito-all" rev="1.10.19" conf="testCompile-&gt;default"/>
+    <exclude org="ant" module="ant" artifact="*" type="*" ext="*" conf="pmd" matcher="exact"/>
+    <exclude org="org.apache.ant" module="ant" artifact="*" type="*" ext="*" conf="pmd" matcher="exact"/>
+    <exclude org="org.apache.ant" module="ant-launcher" artifact="*" type="*" ext="*" conf="pmd" matcher="exact"/>
+    <exclude org="org.codehaus.groovy" module="groovy" artifact="*" type="*" ext="*" conf="pmd" matcher="exact"/>
+    <exclude org="org.codehaus.groovy" module="groovy-all" artifact="*" type="*" ext="*" conf="pmd" matcher="exact"/>
+    <exclude org="org.slf4j" module="slf4j-api" artifact="*" type="*" ext="*" conf="pmd" matcher="exact"/>
+    <exclude org="org.slf4j" module="jcl-over-slf4j" artifact="*" type="*" ext="*" conf="pmd" matcher="exact"/>
+    <exclude org="org.slf4j" module="log4j-over-slf4j" artifact="*" type="*" ext="*" conf="pmd" matcher="exact"/>
+    <exclude org="commons-logging" module="commons-logging" artifact="*" type="*" ext="*" conf="pmd" matcher="exact"/>
+    <exclude org="log4j" module="log4j" artifact="*" type="*" ext="*" conf="pmd" matcher="exact"/>
   </dependencies>
 </ivy-module>

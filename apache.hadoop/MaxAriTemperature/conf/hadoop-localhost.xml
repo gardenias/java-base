@@ -3,7 +3,12 @@
 
     <property>
         <name>fs.defaultFS</name>
-        <value>hdfs://hadoop.pseudo/</value>
+        <value>hdfs://localhsot:9000/</value>
+    </property>
+
+    <property>
+        <name>dfs.replication</name>
+        <value>1</value>
     </property>
 
     <property>
@@ -12,8 +17,7 @@
     </property>
 
     <property>
-        <name>yarn.resourcemanager.address</name>
-        <value>hadoop.pseudo:8032</value>
+        <name>yarn.nodemanager.aux-services</name>
+        <value>mapreduce_shuffle</value>
     </property>
-
 </configuration>
