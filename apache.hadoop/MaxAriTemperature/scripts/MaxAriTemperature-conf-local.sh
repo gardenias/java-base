@@ -1,5 +1,4 @@
 #!/bin/bash
-source ~/.bashrc
 
 ##############################################################################
 ##
@@ -77,19 +76,25 @@ fi
 #-classpath "$CLASSPATH"
 
 # conf file spe
-CONF=$APP_HOME/conf/hadoop-localhost.xml
-# local data path
-INPUT=$APP_HOME/input/ncdc/all
-# hdfs path
-OUTPUT=/max-ari-temperature-tmp
+CONF=$APP_HOME/conf/hadoop-local.xml
+# local data input path
+INPUT=$APP_HOME/input/ncdc/all/
+# local hdfs out path
+OUTPUT=$APP_HOME/output/max-ari-temperature-tmp-conf-local
 
+if [ -d "$OUTPUT" ] ; then
+    echo 'clear old output path and data'
+    rm -rf "$OUTPUT"
+fi
 
 echo "$HADOOPCMD" \
         jar "$APP_HOME"/repos/MaxAriTemperature-1.0.jar \
+        -conf "$CONF" \
         "$INPUT" \
         "$OUTPUT"
 
 exec "$HADOOPCMD" \
         jar "$APP_HOME"/repos/MaxAriTemperature-1.0.jar \
+        -conf "$CONF" \
         "$INPUT" \
         "$OUTPUT"
