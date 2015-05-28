@@ -7,6 +7,7 @@ public class SynchronizedAccount {
     private String name;
     private float amount = 0.0f;
     private static final int DEFAULT_SLEEP_TIME = 100;
+    private final Byte instanceLockObject = new Byte((byte)0);
 
     public SynchronizedAccount(String name, float amount) {
         this.name = name;
