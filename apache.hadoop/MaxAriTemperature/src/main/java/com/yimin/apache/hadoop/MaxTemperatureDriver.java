@@ -42,7 +42,6 @@ public class MaxTemperatureDriver extends Configured implements Tool {
         //additional:job name
         job.setJobName("Max Ari Temperature");// job configuration property name:mapreduce.job.name
 
-        //job.setJar("max.ari.temperature.jar"); // job configuration property name:mapreduce.job.jar
         job.setJarByClass(MaxTemperatureDriver.class);
 
         //3.mapper,reducer,combiner class
