@@ -11,3 +11,6 @@ include 'spring-jms'
 include 'apache.hadoop:MaxAriTemperature'
 
 include 'javase'
+
+include 'sl4fj'
+
