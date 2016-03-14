@@ -1,0 +1,77 @@
+ext {
+    swagger2Core = "1.5.4"
+    spring = "4.1.7.RELEASE"
+    guava = "18.0"
+    slf4j = "1.7.12"
+    servlet = "3.1.0"
+    classmate = "1.2.0"
+    jackson = '2.5.3'
+    snakeyaml = '1.16'
+    springPluginVersion = "1.2.0.RELEASE"
+    jsonPath = "2.0.0"
+    aspectj = "1.8.6"
+    joda = "2.8.2"
+    lombok = "1.16.2"
+    libs = [
+            test          : [
+                    "org.mockito:mockito-all:1.10.19",
+                    "org.powermock:powermock-module-junit4:1.6.4",
+                    "org.powermock:powermock-api-mockito:1.6.4",
+                    "org.powermock:powermock-api-easymock:1.6.4",
+                    "org.powermock:powermock-api-support:1.6.4",
+                    "org.powermock:powermock-module-junit4-rule:1.6.4",
+                    "org.easymock:easymock:3.4",
+                    "junit:junit:4.11"
+            ],
+            base:[
+                    "com.google.guava:guava:${guava}",
+                    "org.projectlombok:lombok:$lombok",
+                    "joda-time:joda-time:$joda",
+            ],
+            spring        : [
+                    "org.springframework.plugin:spring-plugin-core:${springPluginVersion}",
+                    "org.springframework.plugin:spring-plugin-metadata:${springPluginVersion}",
+            ],
+            springProvided: [
+                    "org.springframework:spring-core:$spring",
+                    "org.springframework:spring-web:$spring",
+                    "org.springframework:spring-webmvc:$spring",
+                    "org.springframework:spring-context:$spring",
+                    "org.springframework:spring-aop:${spring}"
+            ],
+            clientProvided: [
+                    "javax.servlet:javax.servlet-api:$servlet"
+            ],
+            fasterxml:["com.fasterxml:classmate:${classmate}"],
+            aspectj:["org.aspectj:aspectjweaver:$aspectj"],
+            json:[
+
+                    "com.fasterxml.jackson.core:jackson-core:${jackson}",
+                    "com.fasterxml.jackson.core:jackson-databind:${jackson}"
+            ],
+            log           : [
+                    'org.slf4j:slf4j-api:1.7.5',
+                    'ch.qos.logback:logback-access:1.0.13',
+                    'ch.qos.logback:logback-classic:1.0.13',
+                    'ch.qos.logback:logback-core:1.0.13'
+            ],
+            apache        : [
+                    //Commons-IO contains utility classes, stream implementations, file filters, and endian classes.
+                    "commons-io:commons-io:2.4",
+                    //Apache Commons Lang, a package of Java utility classes for the classes that are in java.lang's hierarchy, or are considered to be so standard as to justify existence in java.lang.
+                    "org.apache.commons:commons-lang3:3.4",
+                    //The Apache Commons Math project is a library of lightweight, self-contained mathematics and statistics components addressing the most common practical problems not immediately available in the Java programming language or commons-lang.
+                    "org.apache.commons:commons-math3:3.6",
+                    //Apache Commons Email aims to provide an API for sending email. It is built on top of the JavaMail API, which it aims to simplify.
+                    "org.apache.commons:commons-email:1.4",
+                    //Apache Commons Object Pooling Library
+                    "org.apache.commons:commons-pool2:2.4.2",
+                    //Apache Commons DBCP software implements Database Connection Pooling
+                    "org.apache.commons:commons-dbcp2:2.1.1",
+                    //Java library for dynamic proxying
+                    "org.apache.commons:commons-proxy:1.0",
+                    //The Apache Commons Collections package contains types that extend and augment the Java Collections Framework.
+                    "org.apache.commons:commons-collections4:4.1"
+            ]
+    ]
+}

@@ -1,5 +1,5 @@
 dependencies {
-    compile logDependencies
+    //compile logDependencies
 
     testCompile group: 'junit', name: 'junit', version: '4.11'
 }

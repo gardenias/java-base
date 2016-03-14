@@ -1,7 +1,7 @@
 dependencies {
     compile 'javax.jms:javax.jms-api:2.0'
 
-    compile 'org.springframework:spring-jms:4.1.4.RELEASE'
+    compile 'org.springframework:spring-jms:4.1.7.RELEASE'
     compile 'org.apache.activemq:activemq-broker:5.11.1'
     compile 'org.apache.activemq:activemq-client:5.11.1'
     compile 'org.apache.activemq:activemq-pool:5.11.1'

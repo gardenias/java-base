@@ -9,7 +9,7 @@ import java.util.concurrent.Callable;
  */
 public class LambdaInitialization {
     public static void main(String args[]) throws Exception {
-        Callable[] animals = new Callable[]{() -> "Lion", () -> "Crocodile"};
+        Callable<Void>[] animals = new Callable[] {() -> "Lion", () -> "Crocodile"};
 
         System.out.println(animals.length);
         Arrays.asList(animals).forEach(c -> {
@@ -20,12 +20,12 @@ public class LambdaInitialization {
             }
         });
 
-        Callable animals2 = (Callable) () -> {
+        Callable<String> animals2 = () -> {
             System.out.println("method body");
             return "Hello";
         };
 
-        System.out.println(animals.length);
+        // System.out.println(animals.length);
         System.out.println(animals2.call());
     }
 }
