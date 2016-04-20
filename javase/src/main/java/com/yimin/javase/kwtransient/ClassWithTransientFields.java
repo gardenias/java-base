@@ -3,7 +3,7 @@ package com.yimin.javase.kwtransient;
 import java.io.Serializable;
 
 /**
- * java-libs
+ *
  * Created by WuYimin on 2015/5/25.
  */
 public class ClassWithTransientFields implements Serializable {

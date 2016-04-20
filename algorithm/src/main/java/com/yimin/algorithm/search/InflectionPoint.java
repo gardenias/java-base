@@ -3,7 +3,7 @@ package com.yimin.algorithm.search;
 import java.util.Arrays;
 
 /**
- * java-libs
+ *
  * Created by WuYimin on 2015/6/12.
  * 整型数组：前半部分升序，后半部分降序
  * 找出拐点的位置

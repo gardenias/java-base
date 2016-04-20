@@ -1,7 +1,7 @@
 package com.yimin.javase.lambda;
 
 /**
- * java-libs
+ *
  * Created by WuYimin on 2015/6/19.
  */
 public class LambdaHelloWorld {

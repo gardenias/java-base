@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.concurrent.Callable;
 
 /**
- * java-libs
+ *
  * Created by WuYimin on 2015/6/19.
  */
 public class LambdaInitialization {

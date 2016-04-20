@@ -1,16 +1,17 @@
 package kwtransient;
 
-import com.yimin.javase.kwtransient.ClassWithTransientFields;
-import org.junit.Assert;
-import org.junit.Test;
-
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
+import org.junit.Assert;
+import org.junit.Test;
+
+import com.yimin.javase.kwtransient.ClassWithTransientFields;
+
 /**
- * java-libs
+ *
  * Created by WuYimin on 2015/5/25.
  */
 public class ClassWithTransientFieldsTest {

@@ -1,11 +1,12 @@
 package search;
 
-import com.yimin.algorithm.search.InflectionPoint;
 import org.junit.Assert;
 import org.junit.Test;
 
+import com.yimin.algorithm.search.InflectionPoint;
+
 /**
- * java-libs
+ *
  * Created by WuYimin on 2015/6/12.
  */
 public class InflectionPointTest {

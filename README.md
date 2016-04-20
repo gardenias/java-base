@@ -1,22 +1,22 @@
-## java libs test , study or researching
+# Java
 
-project language level:8 - Lambdas,type annotations etc.
+## Models:
+- Algorithm
+- Java Standard Edition
+- Third-party libraries
+- Functional Test
+- Mine Classes
 
-###algorithm
 
-网络上的一些算法题目
+## Directories:
+- config
+- gradle
 
-###baidu-api
-- Geoconv:地图坐标转换
-
-###spring-jms
-- ActiveMQ 集成
-- Session.AUTO_ACKNOWLEDGE,Session.CLIENT_ACKNOWLEDGE
-- ConnectionFactory,CachingConnectionFactory
-- RedeliveryPolicy
-- JmsListener,ListenerContainerFactory
-    - defaultJmsListenerContainerFactory.setConcurrency("50-200");
-    - defaultJmsListenerContainerFactory.setTaskExecutor(executor());
-
-###apache.hadoop
-hadoop 2.x,mr-unit 1.1.0-hadoop2
+## File List:
+- README.md
+- settings.gradle
+- .gitignore
+- build.gradle
+- gradle.properties
+- gradlew
+- gradlew.bat

@@ -1,9 +1,10 @@
 package kwsynchronized;
 
-import com.yimin.javase.kwsynchronized.Account;
-import com.yimin.javase.kwsynchronized.SynchronizedAccount;
 import org.junit.Assert;
 import org.junit.Test;
+
+import com.yimin.javase.kwsynchronized.Account;
+import com.yimin.javase.kwsynchronized.SynchronizedAccount;
 
 /**
  * Created by yimin on 15/5/21.

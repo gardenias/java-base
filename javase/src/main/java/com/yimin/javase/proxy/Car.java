@@ -3,7 +3,7 @@ package com.yimin.javase.proxy;
 import java.util.Random;
 
 /**
- * java-libs
+ *
  * Created by WuYimin on 2015/6/23.
  */
 public class Car implements Moveable {

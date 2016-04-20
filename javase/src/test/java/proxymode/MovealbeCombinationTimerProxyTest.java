@@ -1,18 +1,19 @@
 package proxymode;
 
+import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Proxy;
+
+import org.junit.Test;
+
 import com.yimin.javase.proxy.Car;
 import com.yimin.javase.proxy.Moveable;
 import com.yimin.javase.proxy.MovealbeCombinationLogProxy;
 import com.yimin.javase.proxy.MovealbeCombinationTimerProxy;
 import com.yimin.javase.proxy.jdkproxy.LogInvocationHandler;
 import com.yimin.javase.proxy.jdkproxy.TimerInvocationHandler;
-import org.junit.Test;
-
-import java.lang.reflect.InvocationHandler;
-import java.lang.reflect.Proxy;
 
 /**
- * java-libs
+ *
  * Created by WuYimin on 2015/6/23.
  */
 public class MovealbeCombinationTimerProxyTest {

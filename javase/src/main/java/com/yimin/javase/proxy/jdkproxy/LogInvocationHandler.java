@@ -4,7 +4,7 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
 /**
- * java-libs
+ *
  * Created by WuYimin on 2015/6/23.
  */
 public class LogInvocationHandler implements InvocationHandler {

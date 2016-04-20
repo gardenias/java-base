@@ -1,15 +1,16 @@
 package proxymode.interceptor;
 
+import org.junit.Test;
+
 import com.yimin.javase.proxy.Car;
 import com.yimin.javase.proxy.Moveable;
 import com.yimin.javase.proxy.jdkproxy.interceptor.Interceptor;
 import com.yimin.javase.proxy.jdkproxy.interceptor.InterceptorChain;
 import com.yimin.javase.proxy.jdkproxy.interceptor.LogInterceptor;
 import com.yimin.javase.proxy.jdkproxy.interceptor.TimerInterceptor;
-import org.junit.Test;
 
 /**
- * java-libs
+ *
  * Created by WuYimin on 2015/6/23.
  */
 public class InterceptorChainTest {

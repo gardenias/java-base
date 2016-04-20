@@ -1,14 +1,12 @@
 package com.yimin.javase.proxy.jdkproxy.interceptor;
 
-import org.joda.time.DateTime;
-
-import java.lang.reflect.InvocationHandler;
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
+import org.joda.time.DateTime;
+
 /**
- * java-libs
+ *
  * Created by WuYimin on 2015/6/23.
  */
 public class TimerInterceptor implements Interceptor {

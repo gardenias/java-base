@@ -12,18 +12,10 @@ ext {
     aspectj = "1.8.6"
     joda = "2.8.2"
     lombok = "1.16.2"
+    joddVersion = '3.4.9'
+
     libs = [
-            test          : [
-                    "org.mockito:mockito-all:1.10.19",
-                    "org.powermock:powermock-module-junit4:1.6.4",
-                    "org.powermock:powermock-api-mockito:1.6.4",
-                    "org.powermock:powermock-api-easymock:1.6.4",
-                    "org.powermock:powermock-api-support:1.6.4",
-                    "org.powermock:powermock-module-junit4-rule:1.6.4",
-                    "org.easymock:easymock:3.4",
-                    "junit:junit:4.11"
-            ],
-            base:[
+            base          : [
                     "com.google.guava:guava:${guava}",
                     "org.projectlombok:lombok:$lombok",
                     "joda-time:joda-time:$joda",
@@ -39,21 +31,15 @@ ext {
                     "org.springframework:spring-context:$spring",
                     "org.springframework:spring-aop:${spring}"
             ],
-            clientProvided: [
+            servletClientProvided: [
                     "javax.servlet:javax.servlet-api:$servlet"
             ],
-            fasterxml:["com.fasterxml:classmate:${classmate}"],
-            aspectj:["org.aspectj:aspectjweaver:$aspectj"],
-            json:[
+            fasterxml     : ["com.fasterxml:classmate:${classmate}"],
+            aspectj       : ["org.aspectj:aspectjweaver:$aspectj"],
+            json          : [
 
                     "com.fasterxml.jackson.core:jackson-core:${jackson}",
                     "com.fasterxml.jackson.core:jackson-databind:${jackson}"
-            ],
-            log           : [
-                    'org.slf4j:slf4j-api:1.7.5',
-                    'ch.qos.logback:logback-access:1.0.13',
-                    'ch.qos.logback:logback-classic:1.0.13',
-                    'ch.qos.logback:logback-core:1.0.13'
             ],
             apache        : [
                     //Commons-IO contains utility classes, stream implementations, file filters, and endian classes.
@@ -72,6 +58,26 @@ ext {
                     "org.apache.commons:commons-proxy:1.0",
                     //The Apache Commons Collections package contains types that extend and augment the Java Collections Framework.
                     "org.apache.commons:commons-collections4:4.1"
+            ],
+            jodd          : [
+                    "org.jodd:jodd-core:$joddVersion",
+                    "org.jodd:jodd-bean:$joddVersion"
+            ],
+            test          : [
+                    "junit:junit:4.11",
+                    "org.powermock:powermock-module-junit4:1.6.4",
+                    "org.powermock:powermock-api-mockito:1.6.4",
+                    "org.powermock:powermock-api-easymock:1.6.4",
+                    "org.powermock:powermock-api-support:1.6.4",
+                    "org.powermock:powermock-module-junit4-rule:1.6.4",
+                    "org.mockito:mockito-all:1.10.19",
+                    "org.easymock:easymock:3.4"
+            ],
+            log           : [
+                    'org.slf4j:slf4j-api:1.7.5',
+                    'ch.qos.logback:logback-access:1.0.13',
+                    'ch.qos.logback:logback-classic:1.0.13',
+                    'ch.qos.logback:logback-core:1.0.13'
             ]
     ]
 }

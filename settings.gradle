@@ -1,17 +1,11 @@
-rootProject.name = 'java-libs'
-
-include 'jodd'
-
-include 'baidu-api'
-
-include 'algorithm'
-
-include 'spring-jms'
-
-include 'apache.hadoop:MaxAriTemperature'
+rootProject.name = 'java-base'
 
 include 'javase'
 
-include 'sl4fj'
+include 'functional'
 
-include 'common'
+include 'algorithm'
+
+include 'third'
+
+include 'mine'
