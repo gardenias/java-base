@@ -62,6 +62,7 @@ configure(subprojects) { project ->
     dependencies {
         compile libs.test, libs.log, libs.base
         testCompile libs.test
+        testCompile 'org.assertj:assertj-core:3.6.2'
     }
 }
 /*
@@ -72,7 +73,8 @@ configure(subprojects) { project ->
  *     e.g. 3.2.1.BUILD-SNAPSHOT => 3.2.1.SPR-1234-SNAPSHOT
  */
 
-def qualifyVersionIfNecessary(version) {
+def qualifyVersionIfNecessary(version)
+{
     if (rootProject.hasProperty("BRANCH_NAME")) {
         def qualifier = rootProject.getProperty("BRANCH_NAME")
         if (qualifier.startsWith("SPR-")) {
@@ -80,4 +82,10 @@ def qualifyVersionIfNecessary(version) {
         }
     }
     return version
+}
+
+project(':javase') {
+    dependencies {
+        compile project(':sample-api')
+    }
 }

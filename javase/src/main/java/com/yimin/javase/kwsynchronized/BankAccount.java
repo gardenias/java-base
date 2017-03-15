@@ -3,12 +3,12 @@ package com.yimin.javase.kwsynchronized;
 /**
  * Created by yimin on 15/5/21.
  */
-public class Account {
+public class BankAccount {
     private String name;
     private long amount = 0l;
     private static final int DEFAULT_SLEEP_TIME = 100;
 
-    public Account(String name, long amount) {
+    public BankAccount(String name, long amount) {
         this.name = name;
         this.amount = amount;
     }
@@ -42,7 +42,7 @@ public class Account {
 
     @Override
     public String toString() {
-        return "Account{" +
+        return "BankAccount{" +
                 "name='" + name + '\'' +
                 ", amount=" + amount +
                 '}';

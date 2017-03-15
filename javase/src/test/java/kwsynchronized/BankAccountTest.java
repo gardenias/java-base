@@ -1,22 +1,22 @@
 package kwsynchronized;
 
+import com.yimin.javase.kwsynchronized.BankAccount;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.yimin.javase.kwsynchronized.Account;
 import com.yimin.javase.kwsynchronized.SynchronizedAccount;
 
 /**
  * Created by yimin on 15/5/21.
  */
-public class AccountTest {
+public class BankAccountTest {
     private static int THREAD_NUM = 1000;
 
     @Test
     public void accountInstanceLockTest() {
         Thread[] threads = new Thread[THREAD_NUM];
 
-        final Account acc = new Account("John", 0);
+        final BankAccount acc = new BankAccount("John", 0);
 
         for (int i = 0; i < THREAD_NUM; i++) {
             threads[i] = new Thread(new Runnable() {
