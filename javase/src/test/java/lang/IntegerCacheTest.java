@@ -49,7 +49,7 @@ public class IntegerCacheTest {
      *
      * check IntegerCacheTest.class file
      *
-     * http://docs.oracle.com/javase/tutorial/java/data/autoboxing.html
+     * <a href="http://docs.oracle.com/javase/tutorial/java/data/autoboxing.html">Java Autoboxing</a>
      */
     @Test
     public void primitiveAssignmentUseCache() {
