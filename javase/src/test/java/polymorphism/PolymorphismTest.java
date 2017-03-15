@@ -21,5 +21,8 @@ public class PolymorphismTest {
 
         assertThat(accepter.acceptAccount(waterAccount)).isEqualTo("Declarative Programming language").withFailMessage("java is Declarative Programming language");
         assertThat(accepter.acceptAccount(electricityAccount)).isEqualTo("Declarative Programming language").withFailMessage("java is Declarative Programming language");
+
+        assertThat(accepter.acceptAccount((WaterAccount)waterAccount)).isEqualTo("Water Fee");
+        assertThat(accepter.acceptAccount((ElectricityAccount) electricityAccount)).isEqualTo("Electricity Fee");
     }
 }
